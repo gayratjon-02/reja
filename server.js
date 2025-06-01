@@ -3,6 +3,16 @@ const express = require('express');
 const app = express();
 // express() orqali app obectini chaqirib olamiz
 const http = require("http");
+const fs = require("fs");
+
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+    if(err){
+        console.log("ERROR:", err);
+    }else{
+        user = JSON.parse(data);
+    }
+});
 
 // 1 : Kirish code
 app.use(express.static("public"));
@@ -30,6 +40,10 @@ app.set("view engine", "ejs")
 // Ejs orqali backend ichida frontend(view) yasaymiz
 
 // 4 Routiing code 
+
+app.get("/author", (req, res) => {
+    res.render("author", {user: user});
+})
 
 app.post("/create-item", (req, res) => {
     console.log(req.body);
