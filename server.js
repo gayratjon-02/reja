@@ -30,13 +30,23 @@ app.set("view engine", "ejs")
 // Ejs orqali backend ichida frontend(view) yasaymiz
 
 // 4 Routiing code 
-app.get("/hello", function(req, res){
-    res.end(`<h1 style = "background: red">HELLO WORLD by Gayratjon(ALI)</h1>`);
-});
 
-app.get("/gift", function(req, res){
-    res.end('siz sovgalar bolimidasiz')
+app.post("/create-item", (req, res) => {
+    console.log(req.body);
+    res.json({test: "success"});
+    
 })
+
+app.get("/", function(req, res){
+    res.render("harid");
+});
+// app.get("/hello", function(req, res){
+//     res.end(`<h1 style = "background: red">HELLO WORLD by Gayratjon(ALI)</h1>`);
+// });
+
+// app.get("/gift", function(req, res){
+//     res.end('siz sovgalar bolimidasiz')
+// })
 
 const server = http.createServer(app);
 let PORT = 3000;
