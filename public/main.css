@@ -1,0 +1,252 @@
+.frame {
+  width: 100%;
+  height: 100%;
+  background-color: gren;
+  display: flex;
+  justify-content: center;
+}
+.frame .container .left-frame {
+  position: relative;
+  width: 305px;
+  height: 1315px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.frame .container .left-frame .left1 {
+  margin-top: 50px;
+  position: relative;
+  width: 219px;
+  height: 288px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.frame .container .left-frame .left1 img-box img {
+  width: 150px;
+  height: 150px;
+}
+.frame .container .left-frame .left1 .green-round {
+  position: absolute;
+  bottom: 150px;
+  right: 45px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(126, 185, 66) red;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  background: rgb(126, 185, 66);
+}
+.frame .container .left-frame .left1 span {
+  margin-top: 31px;
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+.frame .container .left-frame .left1 p {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+.frame .container .left-frame .left1 .social-icons {
+  width: 219px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.frame .container .left-frame .left1 .social-icons img {
+  width: 24px;
+  height: 24px;
+}
+.frame .container .left-frame .marginer {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 220px;
+  height: 1;
+  border: 1.5px solid rgb(240, 240, 246);
+}
+.frame .container .left-frame .left2 {
+  width: 220px;
+  height: 126px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.frame .container .left-frame .left2 .left2-info {
+  width: 220px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.frame .container .left-frame .left2 .left2-info span {
+  width: 46px;
+  height: 24px;
+  background: rgb(255, 180, 0);
+}
+.frame .container .left-frame .left2 .left2-info span .text {
+  margin-left: 9px;
+  /* Paragraph Progress - 15 */
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+.frame .container .left-frame .left2 .left2-info p {
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: right;
+  text-transform: capitalize;
+}
+.frame .container .left-frame .left3 {
+  width: 220px;
+  height: 153px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.frame .container .left-frame .left3 .main.lang {
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+.frame .container .left-frame .left3 .lang-per {
+  width: 220px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.frame .container .left-frame .left3 .lang-per span {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+.frame .container .left-frame .left3 .lang-per p {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+.frame .container .left-frame .left3 .lang-progress {
+  width: 220px;
+  height: 4px;
+}
+.frame .container .left-frame .left3 .lang-progress .empty {
+  width: 100%;
+  height: 4px;
+  /* Yellow */
+  border: 0.5px solid rgb(255, 180, 0);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.frame .container .left-frame .left3 .lang-progress .loading-lang {
+  width: 218px;
+  height: 2px;
+  border-radius: 30px;
+  /* Yellow */
+  background: rgb(255, 180, 0);
+}
+.frame .container .left-frame .left5 {
+  width: 186px;
+  height: 148px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.frame .container .left-frame .left5 span {
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+.frame .container .left-frame .left5 .extra-box {
+  width: 186px;
+  height: 24px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.frame .container .left-frame .left5 .extra-box img {
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+}
+.frame .container .left-frame .left5 .extra-box .skill-box {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+.frame .container .left-frame .left6 {
+  width: 220px;
+  height: 40px;
+  background: rgb(255, 180, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame .container .left-frame .left6 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame .container .left-frame .left6 a span {
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.frame .container .left-frame .left6 a img {
+  margin-left: 21px;
+  width: 12px;
+  height: 12px;
+}
+
+/*# sourceMappingURL=main.css.map */

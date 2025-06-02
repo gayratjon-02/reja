@@ -1,0 +1,14 @@
+.frame .container{
+    width: 1440px;
+    height: 1315px;
+
+    display: flex;
+    flex-direction: row;
+
+    /* White */
+background: rgb(255, 255, 255);
+}
+
+a{
+    text-decoration: none;
+}
