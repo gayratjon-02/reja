@@ -1,3 +1,8 @@
+body{
+    /* Background */
+background: rgb(240, 240, 246);
+}
+
 .frame{
     width: 100%;
     height: 100%;
@@ -10,6 +15,8 @@
 
 
         .left-frame{
+            background-color: white;
+            margin-right: 30px;
             position: relative;
             width: 305px;
             height: 1315px;
@@ -74,6 +81,7 @@
                }
 
                .social-icons{
+                margin-top: 15px;
                 width: 219px;
                 height: 24px;
 
@@ -307,6 +315,325 @@
                    }
                 }
             }
+        }
+
+        .midd-frame{
+            background-color: white;
+            margin-right: 30px;
+            position: relative;
+            width: 970px;
+            height: 1315px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // justify-content: space-between;
+
+            .midd-top{
+                position: relative;
+                width: 100%;
+                height: 467px;
+
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                // justify-content: center;
+                .midd-wrapper{
+
+                    width: 100%;
+                    height: 100%;
+                    margin-left: 30px;
+
+                p{
+                    // margin-left: 60px;
+                    margin-top: 93px;
+                    width: 500px;
+                    height: 118px;
+                    font-family: Inter;
+                    font-size: 48px;
+                    font-weight: 700;
+                    line-height: 123.6%;
+                    letter-spacing: 0%;
+
+                    .front{
+                        color: orange;
+                    }
+                }
+
+                .sspan{
+                    display: block;
+                    margin-top: 18px;
+                    width: 424px;
+                    height: 88px;
+                    color: rgb(118, 118, 118);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                    text-transform: capitalize;
+                }
+                a{
+                    margin-top: 25px;
+                    width: 154px;
+                    height: 51px;
+
+                    border-radius: 5px;
+                    background: rgb(255, 180, 0);
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    small{
+                        color: rgb(43, 43, 43);
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 19px;
+                        letter-spacing: 0%;
+                    }
+
+                    ins{
+                        margin-left:9px ;
+                            width: 16px;
+                            height: 16px;
+                        img{
+                            margin-left:9px ;
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+                .main-photo{
+                    img{
+                        position: absolute;
+                        top: 5px;
+                        right: 154px;
+                        width: 326px;
+                        height: 460px;
+                    }
+
+                
+                }
+
+                .nyellow{
+                    position: absolute;
+                    top: 40px;
+                    left: 11px;
+                }
+
+                .ngreen{
+                    position: absolute;
+                    top: 50px;
+                    right: 504px;
+                }
+
+                .syellow{
+                    position: absolute;
+                    bottom: 80px;
+                    right: 527px;
+                }
+
+                .sgreen{
+                    position: absolute;
+                    bottom: 20px;
+                    left: 30px;
+                }
+
+                .nrecangle{
+                    position: absolute;
+                    bottom: 120px;
+                    left: 280px;
+                }
+
+                .triangle-round{
+                    position: absolute;
+                    bottom: 20px;
+                    right: 162px;
+
+                }
+
+                .ynrecangle{
+                    position: absolute;
+                    top: 90px;
+                    right: 212px;
+
+                }
+                }
+               
+
+
+            }
+
+            .midd-middle{
+                width: 100%;
+                height: 125px;
+                // visibility: hidden;
+                background: rgb(229, 229, 229);
+
+            }
+
+            .midd-bott{
+                background: rgb(229, 229, 229);
+                // margin-top: 138px;
+                width: 970px;
+                height: 653px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2{
+                    color: rgb(43, 43, 43);
+                    font-family: Inter;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 123.6%;
+                    letter-spacing: 0%;
+                    text-align: left;
+                    text-transform: capitalize;
+                }
+
+                p{
+                    margin-top: 25px;
+                    width: 428px;
+                    height: 68px;
+                    color: rgb(118, 118, 118);
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0%;
+                    text-align: center;
+                    text-transform: capitalize;
+                }
+
+                .contain-wrapper{
+                    background: rgb(229, 229, 229);
+                    margin-top: 50px;
+                    width: 100%;
+                    height: 100%;
+
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    .contain{
+                        margin-bottom: 20px;
+                        width: 310px;
+                        height: 225px;
+
+                        background: rgb(255, 255, 255);
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+
+                        img{
+                            margin-top: 35px;
+                            width: 68px;
+                            height: 68px;
+                        }
+
+                        span{
+                            margin-top: 26px;
+                            color: rgb(43, 43, 43);
+                            font-family: Inter;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 123.6%;
+                            letter-spacing: 0%;
+                            text-align: left;
+                            text-transform: capitalize;
+                        }
+                        p{
+                            margin-top: 15px;
+                            color: rgb(118, 118, 118);
+                            font-family: Inter;
+                            font-size: 15px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            letter-spacing: 0%;
+                            text-align: center;
+                            text-transform: capitalize;
+
+                        }
+
+                    }
+
+                    .xcont{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        span{
+                            color: rgb(43, 43, 43);
+                            font-family: Inter;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 123.6%;
+                            letter-spacing: 0%;
+                            text-align: left;
+                            text-transform: capitalize;
+                        }
+
+                        p{
+                            width: 260px;
+                            height: 78px;
+                        }
+
+                        button{
+                            margin-top: 30px;
+                            color: rgb(255, 180, 0);
+                            font-family: Roboto;
+                            font-size: 12px;
+                            font-weight: 700;
+                            line-height: 14px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .right-frame{
+            width: 108px;
+            height: 1315px;
+
+            box-shadow: 4px 0px 10px 0px rgba(47, 122, 249, 0.1);
+            background: rgb(250, 250, 250);
+
+           .right-icons{
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .t-icon{
+                margin-top: 52px;
+            }
+
+            .icon-menu{
+                margin-top:215px ;
+                width: 65px;
+                height: 493px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+           }
         }
 
        
