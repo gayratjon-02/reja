@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="frame">
+        <div class="container">
+            <!-- left frame star-->
+
+            <div class="left-frame">
+                <div class="left-mid-frame">
+                    <div class="left1">
+                        <div class="img-box"><img src="/author/images/smallProfile.jpeg" alt="">
+                          <div class="green-round"></div>
+                      
+                      </div>
+      
+                        <span><%=user.name%></span>
+                        <p><%=user.profession%></p>
+                      
+                        <div class="social-icons">
+                         <a href="#"> <img src="/author/btn_icon/Facebook.png" alt="sas"></a>
+                         <a href="#"> <img src="/author/btn_icon/Instagram.png" alt="sas"></a>
+                          <a href="#"><img src="/author/btn_icon/Twitter.png" alt="sas"></a>
+                        <a href="#"><img src="/author/btn_icon/Linkeding.png" alt="sas"></a>
+                         <a href="#"> <img src="/author/btn_icon/Youtube.png" alt="sas"></a>
+                          <a href="#"><img src="/author/btn_icon/Dribbble.png" alt="sas"></a>
+                          
+                        </div>
+                      </div>
+                     
+                      <div class="marginer"></div>
+      
+                      <div class="left2">
+                          <div class="left2-info">
+                              <span> <div class="text">Age: </div></span>
+                              <p><%=user.age%></p>
+                          </div>
+      
+                          <div class="left2-info">
+                              <span style="width: 89px;"> <div class="text">Residence:</div></span>
+                              <p><%=user.residence%></p>
+                          </div>
+      
+                          <div class="left2-info">
+                              <span style="width: 85px;"><div class="text">Freelance:</div></span>
+                              <p style="/* Paragraph Progress - 15 */
+                              color: rgb(126, 185, 66);
+                              font-family: Inter;
+                              font-size: 15px;
+                              font-weight: 400;
+                              line-height: 24px;
+                              letter-spacing: 0%;
+                              text-align: right;
+                              text-transform: capitalize;">Available</p>
+                          </div>
+      
+                          <div class="left2-info">
+                              <span  style="width: 75px;"><div class="text">Adress:</div></span>
+                              <p><%=user.adress%></p>
+                          </div>
+      
+                      </div>
+                      <div class="marginer"></div>
+      
+                      <div class="left3">
+                          <div class="main-lang">Languages</div>
+      
+                          <div class="lang-per">
+                              <span><%=user.languages[0]%></span>
+                              <p>100%</p>
+                          </div>
+      
+                          <div class="lang-progress">
+                              <div class="empty">
+                                  <div class="loading-lang"></div>
+                              </div>
+                          </div>
+      
+                          <div class="lang-per">
+                              <span><%=user.languages[2]%></span>
+                              <p>80%</p>
+                          </div>
+      
+                          <div class="lang-progress">
+                              <div class="empty">
+                                  <div style="width: 208px;" class="loading-lang"></div>
+                              </div>
+                          </div>
+      
+      
+                          <div class="lang-per">
+                              <span><%=user.languages[1]%></span>
+                              <p>60%</p>
+                          </div>
+      
+                          <div class="lang-progress">
+                              <div class="empty">
+                                  <div style="width: 190px;" class="loading-lang"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="marginer"></div>
+      
+                      <div style="height: 242px;" class="left3">
+                          <div class="main-lang">Skills</div>
+      
+                          <div class="lang-per">
+                              <span><%=user.skills[0]%></span>
+                              <p>90%</p>
+                          </div>
+      
+                          <div class="lang-progress">
+                              <div class="empty">
+                                  <div style="width: 209px;" class="loading-lang"></div>
+                              </div>
+                          </div>
+      
+                          <div class="lang-per">
+                              <span><%=user.skills[1]%></span>
+                              <p>85%</p>
+                          </div>
+      
+                          <div class="lang-progress">
+                              <div class="empty">
+                                  <div style="width: 207px;" class="loading-lang"></div>
+                              </div>
+                          </div>
+      
+      
+                          <div class="lang-per">
+                              <span><%=user.skills[2]%></span>
+                              <p>80%</p>
+                          </div>
+      
+                          <div class="lang-progress">
+                              <div class="empty">
+                                  <div style="width: 201px;" class="loading-lang"></div>
+                              </div>
+                          </div>
+      
+                          <div class="lang-per">
+                              <span><%=user.skills[3]%></span>
+                              <p>75%</p>
+                          </div>
+      
+                          <div class="lang-progress">
+                              <div class="empty">
+                                  <div style="width: 187px;" class="loading-lang"></div>
+                              </div>
+                          </div>
+      
+                          <div class="lang-per">
+                              <span><%=user.skills[4]%></span>
+                              <p>85%</p>
+                          </div>
+      
+                          <div class="lang-progress">
+                              <div class="empty">
+                                  <div style="width: 207px;" class="loading-lang"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="marginer"></div>
+      
+                      <div class="left5">
+                          <span>Extra Skills</span>
+      
+                          <div class="extra-box">
+                              <img src="/author/btn_icon/skill_Icons.png" alt="">
+                              <div class="skill-box"><%=user.extra_skills[0]%> , <%=user.extra_skills[1]%></div>
+                          </div>
+      
+                          <div class="extra-box">
+                              <img src="/author/btn_icon/skill_Icons.png" alt="">
+                              <div class="skill-box"><%=user.extra_skills[2]%>  </div>
+                          </div>
+      
+                          <div class="extra-box">
+                              <img src="/author/btn_icon/skill_Icons.png" alt="">
+                              <div class="skill-box"><%=user.extra_skills[3]%> </div>
+                          </div>
+      
+                          <div class="extra-box">
+                              <img src="/author/btn_icon/skill_Icons.png" alt="">
+                              <div class="skill-box"><%=user.extra_skills[4]%> </div>
+                          </div>
+      
+                      </div>
+                     
+      
+                      <div class="marginer"></div>
+                      <div class="left6">
+                          <a href="#">
+                              <span>Download CV</span>
+                              <img src="/author/btn_icon/download_Icon.png" alt="">
+                          </a>
+                      </div>
+                </div>
+            </div>
+            <!-- midd frame star-->
+            <div class="midd-frame">
+
+                <div class="midd-top">
+                   <div class="midd-wrapper">
+                    <p>I’m Rayan Adlrdard <b class="front">Front-end</b> Developer </p>
+
+                    <span class="sspan">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.</span>
+
+                    <a href="#">
+                        <small>HIRE ME</small>
+                        <ins><img src="/author/btn_icon/right.png" alt="rasn"></ins>
+                    </a>
+
+                    <div class="main-photo">
+                        <img src="/author/images/Big-image 1.png" alt="main">
+                    </div>
+
+
+                    <div class="yellow-round nyellow"></div>
+                    <div class="green-round ngreen"></div>
+                    <div class="yellow-round syellow"></div>
+                    <div class="green-round sgreen"></div>
+                    <div class="recange-round nrecangle"></div>
+                    <div class="yrecange-round ynrecangle"></div>
+                    <div class="triangle-round"></div>
+    
+    
+                   </div>
+                </div>
+                <!-- ss -->
+               
+
+                <div class="midd-middle"></div>
+
+                <div class="midd-bott">
+
+                    <h2>My Services</h2>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum</p>
+
+
+                    <div class="contain-wrapper">
+                        <div class="contain">
+                            <img src="/author/btn_icon/Icons_coding.png" alt="">
+
+                            <span>web development</span>
+
+                            <p>blog, e-commerce</p>
+                        </div>
+
+                        <div class="contain">
+                            <img src="/author/btn_icon/Icons_illustration.png" alt="">
+
+                            <span>uI/uX design</span>
+
+                            <p>Mobile app, website design</p>
+                        </div>
+
+                        <div class="contain">
+                            <img src="/author/btn_icon/Icons_Microphone.png" alt="">
+
+                            <span>sound design</span>
+
+                            <p>Voice Over, Beat Making</p>
+                        </div>
+
+                        <div class="contain">
+                            <img src="/author/btn_icon/Icons_game-development.png" alt="">
+
+                            <span>game design </span>
+
+                            <p>Character Design, Props & Objects</p>
+                        </div>
+
+                        <div class="contain">
+                            <img src="/author/btn_icon/Icons_Photographer.png" alt="">
+
+                            <span>photography </span>
+
+                            <p>  portrait, product photography</p>
+                        </div>
+
+                        <div class="contain xcont">
+                          
+                            <span>advertising  </span>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. </p>
+
+                            <button>ORDER now</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="right-frame">
+
+                <div class="right-icons">
+                    <div class="r-icon t-icon">
+                        <a href="#"><img src="/author/btn_icon/Contrast.png" alt=""></a>
+                    </div>
+
+                    <div class="icon-menu">
+                        <div class="r-icon">
+                            <a href="#"><img src="/author/btn_icon/Home.png" alt=""></a>
+                        </div>
+    
+                        <div class="r-icon">
+                            <a href="#"><img src="/author/btn_icon/Service.png" alt=""></a>
+                        </div>
+    
+                        <div class="r-icon">
+                           <a href="#"><img src="/author/btn_icon/student.png" alt=""></a>
+                        </div>
+    
+                        <div class="r-icon">
+                           <a href="#"> <img src="/author/btn_icon/Portfolio.png" alt=""></a>
+                        </div>
+    
+                        <div class="r-icon">
+                            <a href="#"><img src="/author/btn_icon/Blog.png" alt=""></a>
+                        </div>
+    
+                        <div class="r-icon">
+                            <a href="#"><img src="/author/btn_icon/Contact.png" alt=""></a>
+                        </div>
+                    </div>
+    
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
