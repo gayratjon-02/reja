@@ -34,7 +34,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     .then((response) => {
       document
         .getElementById("item-list")
-        .insertAdjacentElement("beforeend", itemTemplate(response.data));
+        .insertAdjacentHTML("beforeend", itemTemplate(response.data));
       //itemTemplate(response.data) - html da qoshilishi kerak bolgan dzayn
       createField.value = "";
       createField.focus();

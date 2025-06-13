@@ -44,9 +44,9 @@ const shop = new Shop(4, 5, 2);
 // shop.qoldiq();
 console.log("********")
 shop.sotish("non", 3);
-// shop.qoldiq();
+shop.qoldiq();
 
-shop.qabul("lagmo", 3);
+shop.qabul("lagmon", 3);
 // shop.qoldiq();
 
 // Shop nomli class tuzing, va bu class 3 xill parametr qabul qilsin.

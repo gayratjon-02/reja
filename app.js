@@ -30,19 +30,11 @@ app.set("view engine", "ejs");
 //4.Routing codes
 app.post("/create-item", (req, res) => {
   // console.log("STEP-2: FrontEnd da backendga keldi");
-  console.log(req.body);
+//   console.log(req.body);
   const new_reja = req.body.reja;
   // console.log("STEP-3: BACKEND => DATABASE ");
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    /* if (err) {
-    //   console.log(err);
-    //   res.end("something went wrong");
-    // } else {
-    //   res.end("succesfully added");
-    // } Bu Traditional request uchun post
-    */
-    //Endi modern post uchun yozamiz
-    // console.log(data.ops);
+    console.log(data.ops)
     res.json(data.ops[0]);
   });
 });
