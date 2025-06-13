@@ -1,89 +1,87 @@
-console.log('Web Serverni boshlash');
-const express = require('express');
+console.log("Web Serverni boshlash");
+const express = require("express");
+const res = require("express/lib/response");
 const app = express();
-// express() orqali app obectini chaqirib olamiz
 const fs = require("fs");
-
-
-// MongoDB chaqirish
-
-const db = require("./server").db();
+//CRUD ishlashi uchun Mongodb ni require qilib olamiz
+const mongodb = require("mongodb");
 
 let user;
 fs.readFile("database/user.json", "utf8", (err, data) => {
-    if(err){
-        console.log("ERROR:", err);
-    }else{
-        user = JSON.parse(data);
-    }
+  if (err) {
+    console.log("ERROR:", err);
+  } else {
+    user = JSON.parse(data);
+  }
 });
 
-// 1 : Kirish code
+//MongoDB chaqiramiz
+const db = require("./server").db(); //...CRUD
+//1.Kirish code
 app.use(express.static("public"));
-// Har qanday browserdan kirib kelayotgan sorovlar
-// uchun public folder ochiq degan manoni anglatadi.
-// keinchalik style va image'larni shu folderga joylashtiriladi
-
 app.use(express.json());
-// bu kodimiz  kirib kelayotgan json formatdagi
-// datani object'ga ogirib beradi
+app.use(express.urlencoded({ extended: true }));
 
-app.use(express.urlencoded({extended: true}));
-// HTML form'dan POST qilinganda express server 
-// qabul qilib olish uchun yoziladi. bu yozilmasa
-// formdan express qabul qilmaydi
-
-// 2 SESSION =========
-
-// 3 Views code: Traditional usulda ya'ni backend'da view yasab
-// uni cliend(user)'ga yuboramiz....
+//2. Session codes
+//3. Views codes
 app.set("views", "views");
-// view folder korsatiladi
-app.set("view engine", "ejs")
-// view egine'ni ejs ekanligi korsatiladi
-// Ejs orqali backend ichida frontend(view) yasaymiz
+app.set("view engine", "ejs");
 
-// 4 Routiing code 
-
-
-app.get("/author", (req, res) => {
-    res.render("author", {user: user});
-})
-
+//4.Routing codes
 app.post("/create-item", (req, res) => {
-    console.log("user entered /create-item")
-    console.log(req.body);
-    const new_reja = req.body.reja;
-    db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
-        if(err) {
-            console.log(err);
-            res.end("Something went wrong")
-        } else{
-            res.end("seccesfully added");
-        }
-    })
-})
-
-
-app.get("/", function(req, res){
-    console.log("user entered /")
-    db.collection("plans").find().toArray((err, data) => {
-        if(err) {
-            console.log(err);
-            res.end("Something went wrong");
-        } else{
-            res.render("reja", { items: data  });
-        }
-    })
+  // console.log("STEP-2: FrontEnd da backendga keldi");
+  console.log(req.body);
+  const new_reja = req.body.reja;
+  // console.log("STEP-3: BACKEND => DATABASE ");
+  db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+    /* if (err) {
+    //   console.log(err);
+    //   res.end("something went wrong");
+    // } else {
+    //   res.end("succesfully added");
+    // } Bu Traditional request uchun post
+    */
+    //Endi modern post uchun yozamiz
+    // console.log(data.ops);
+    res.json(data.ops[0]);
+  });
 });
-// app.get("/hello", function(req, res){
-//     res.end(`<h1 style = "background: red">HELLO WORLD by Gayratjon(ALI)</h1>`);
-// });
 
-// app.get("/gift", function(req, res){
-//     res.end('siz sovgalar bolimidasiz')
-// })
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  console.log(id);
+  //db ga kirib malumoni ochirish =>
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
+});
 
+app.get("/", function (req, res) {
+  // console.log("STEP-1: BACKENDga kirish");
 
+  // console.log("STEP-2: BACKEND => DATABASE"); //backenddan databasega borib yana qaytib keladi
 
- module.exports = app;
+  db.collection("plans") //plans degan collectionni ushla
+    .find() // unidagi hamma malumotlarni ol
+    .toArray((err, data) => {
+      // console.log("STEP-3: DATABASE => BACKEND");
+      console.log(data);
+      // va shu malumotlarni array ga otkaz
+
+      // console.log("STEP-3: BACKEND HTML => FRONTEND");
+      if (err) {
+        console.log(err);
+        res.end("something went wrong");
+      } else {
+        res.render("reja", { items: data });
+      }
+    });
+});
+app.get("/author", (req, res) => {
+  res.render("author", { user: user });
+});
+
+module.exports = app;

@@ -1,13 +1,83 @@
 
+// TASK-C
+const moment = require("moment");
+class Shop {
+        non;
+        lagmon;
+        cola;
+        constructor(non, lagmon, cola){
+                this.non = non;
+                this.lagmon = lagmon;
+                this.cola = cola
+        }
+
+        qoldiq(){
+                console.log(`hozir ${moment().format("HH:mm")} da ${this.non}ta non, ${this.lagmon}ta lagmon, ${this.cola}ta cola mavjud`);
+        }
+
+        sotish(name, amount) {
+                if(name === "non"){
+                this.non -= amount;
+                } else if(name === "lagmon"){
+                this.lagmon -= amount;
+                }else if(name === "cola"){
+                this.cola -= amount;
+                }else{
+                        console.log("bunday mahsulot mavjud emas")
+                }
+        }
+
+        qabul(name, amount) {
+                if(name === "non"){
+                this.non += amount;
+                } else if(name === "lagmon"){
+                this.lagmon += amount;
+                }else if(name === "cola"){
+                this.cola += amount;
+                }else{
+                        console.log("bunday mahsulot mavjud emas")
+                }
+        }
+
+};
+const shop = new Shop(4, 5, 2);
+// shop.qoldiq();
+console.log("********")
+shop.sotish("non", 3);
+// shop.qoldiq();
+
+shop.qabul("lagmo", 3);
+// shop.qoldiq();
+
+// Shop nomli class tuzing, va bu class 3 xill parametr qabul qilsin.
+// Hamda classning quyidagdek 3'ta metodi bo'lsin:
+
+// 1) qoldiq
+// 2) sotish
+// 3) qabul
+
+// Har bir metod ishga tushgan vaqtda log qilinsin
+
+// MASALAN:
+// const shop = new Shop(4, 5, 2)
+
+// shop.qoldiq();
+// natija qaytishi kerak: Hozir 20: 40'da 4'ta non, 5'ta lag'mon va 2'ta cola mavjud
+
+// shop.sotish("non", 3); & shop.qabul("cola", 4); & shop.qoldiq();
+// Natija qaytishi kerak: Hozir 20:50da 1ta non, 5ta lag'mon va 6ta cola mavjud!
+
+
+
 // B-TASK:
 
-function countDigits(text) {
-        const str = text.split("");
-        const result = str.filter(ele => Number(ele));
-        console.log(`${text} text'da    atiga ${result.length} ta son bor`);
-}
+// function countDigits(text) {
+//         const str = text.split("");
+//         const result = str.filter(ele => Number(ele));
+//         console.log(`${text} text'da    atiga ${result.length} ta son bor`);
+// }
 
-countDigits("ad2a54y79wet0sf757gb9");
+// countDigits("ad2a54y79wet0sf757gb9");
 
 
 
