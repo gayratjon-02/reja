@@ -1,4 +1,6 @@
-console.log("FrontEnd JS ishga tushdi");
+ 
+
+console.log("FrontEnd JS ishga tushdi.");
 
 function itemTemplate(item) {
   return `
@@ -46,26 +48,66 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
 
 // UPDATE and DELETE
 
-document.addEventListener("click", function (e) {
-  //   console.log(e);
-  //DELETE operation
-  if (e.target.classList.contains("delete-me")) {
-    if (confirm("Aniq ochirasizmi"));
-    {
+document.addEventListener("click", function(e) {
+  // delete operatiuons
+  // console.log(e.target);
+  if(e.target.classList.contains("delete-me")){
+    if(confirm("Aniq ochirmoqchismisiz?")){
       axios
-        .post("/delete-item", { id: e.target.getAttribute("data-id") })
-        .then((response) => {
-          console.log(response.data);
-          e.target.parentElement.parentElement.remove();
-        })
-        .catch((err) => {
-          console.log("Qaytadan harakat qiling");
-        });
+      .post("/delete-item", {id: e.target.getAttribute("data-id")})
+      .then(response => {
+        console.log(response.data);
+        e.target.parentElement.parentElement.remove();
+      }).catch(err => {
+        console.log("iltimos qayta tekshiring");
+      })
     }
-  }
 
-  //EDIT operation
-  if (e.target.classList.contains("edit-me")) {
-    alert("Siz edit tugmasini bosdingiz");
+  }
+// edit operations
+
+  if (e.target.classList.contains("edit-me")){
+let userInput = prompt(
+  "yangi ozgartirish kiriting",
+   e.target.parentElement.parentElement.querySelector(".item-text").innerHTML);
+if(userInput){
+  axios
+  .post("/edit-item", {
+    id: e.target.getAttribute("data-id"),
+    new_input: userInput,} ) // 
+  .then((response) => {
+    console.log(response.data) 
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;
+    
+  })
+  .catch((err) => {
+    console.log("iltimos qaytadan harakat qiling");
+  });
+
+}
   }
 });
+
+
+
+
+
+// delete All 
+document.getElementById("clean-all").addEventListener("click", function() {
+  if(confirm("haqiqatdan hammasini ochirib yubormoqchimisiz")){
+    axios.post("/delete-all", {delete_all: true})
+    .then(response => {
+      alert("siz hammasini ochirib yubordingiz");
+      document.location.reload();
+    })
+  }
+})
+
+// document.getElementById("clean-all").addEventListener("click", function() {
+//   axios
+//   .post("/delete-all" ,{delete_all: true})
+//   .then(response => {
+//     alert(response.data.state);
+//     document.location.reload()
+//   })
+// })
