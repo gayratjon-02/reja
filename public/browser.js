@@ -30,10 +30,14 @@ let createField = document.getElementById("create-field");
 
 document.getElementById("create-form").addEventListener("submit", function (e) {
   e.preventDefault();
-
+  console.log("STEP 1: TUGMA BOSILDI");
   axios
     .post("/create-item", { reja: createField.value })
     .then((response) => {
+
+      console.log("STEP 6: backend => frontendja javob keldi");
+
+      console.log(response.data)
       document
         .getElementById("item-list")
         .insertAdjacentHTML("beforeend", itemTemplate(response.data));
@@ -46,17 +50,18 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     });
 });
 
-// UPDATE and DELETE
+//  DELETE
 
 document.addEventListener("click", function(e) {
-  // delete operatiuons
-  // console.log(e.target);
+
   if(e.target.classList.contains("delete-me")){
+    console.log("STEP 1: TugMa BoSilDi");
     if(confirm("Aniq ochirmoqchismisiz?")){
       axios
       .post("/delete-item", {id: e.target.getAttribute("data-id")})
       .then(response => {
         console.log(response.data);
+        console.log("STEP 6: Backend => FRONTEND data kirib kelyabdi")
         e.target.parentElement.parentElement.remove();
       }).catch(err => {
         console.log("iltimos qayta tekshiring");
@@ -64,9 +69,10 @@ document.addEventListener("click", function(e) {
     }
 
   }
-// edit operations
+// EDIT operations
 
   if (e.target.classList.contains("edit-me")){
+    console.log("STEP 1: TUGMA BOSILDI");
 let userInput = prompt(
   "yangi ozgartirish kiriting",
    e.target.parentElement.parentElement.querySelector(".item-text").innerHTML);
@@ -76,11 +82,12 @@ if(userInput){
     id: e.target.getAttribute("data-id"),
     new_input: userInput,} ) // 
   .then((response) => {
-    console.log(response.data) 
+    console.log("response:", response.data)
       e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;
-    
+    console.log("STEP 6: BackEnd => FrontEnd ga data olib keldi")
   })
-  .catch((err) => {
+  .
+  catch((err) => {
     console.log("iltimos qaytadan harakat qiling");
   });
 
@@ -94,20 +101,13 @@ if(userInput){
 
 // delete All 
 document.getElementById("clean-all").addEventListener("click", function() {
+  console.log("STEP 1: Tugma Bosildi")
   if(confirm("haqiqatdan hammasini ochirib yubormoqchimisiz")){
     axios.post("/delete-all", {delete_all: true})
     .then(response => {
+      console.log("STEP 6: BackEnd => FrontEnd ga keldi")
       alert("siz hammasini ochirib yubordingiz");
       document.location.reload();
     })
   }
 })
-
-// document.getElementById("clean-all").addEventListener("click", function() {
-//   axios
-//   .post("/delete-all" ,{delete_all: true})
-//   .then(response => {
-//     alert(response.data.state);
-//     document.location.reload()
-//   })
-// })

@@ -1,10 +1,10 @@
 
-const http = require("http");
-const mongodb = require("mongodb");
+const http = require("http"); // core module
+const mongodb = require("mongodb"); // external package
 
 let db;
 const connectionString = "mongodb+srv://gayratjon02:Gayratjon2002@cluster0.fssdmk5.mongodb.net/Reja";
-// DB all
+// DB connection
 mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true,},
     (err, client) => {
         if(err) console.log("ERROR on connection MongoDB");
