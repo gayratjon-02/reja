@@ -1,12 +1,8 @@
 // TASK D
-
 function checkContent(par1, par2){
-    const a = par1.split("");
-    const b = par2.split("");
-
-    const res1 = a.sort().toString();
-    const res2 = b.sort().toString();
-    console.log(res1 === res2)
+    const a = par1.split("").sort().join("");
+    const b = par2.split("").sort().join("");
+   console.log(a===b);
 };
 checkContent("mitgroup", "gmtiprou");
 
