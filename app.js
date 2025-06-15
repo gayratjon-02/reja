@@ -78,27 +78,27 @@ app.post("/create-item", (req, res) => {
 
 
 // Delete API
-app.post("/delete-item", (req, res) =>{
-  const id = req.body.id;
+// app.post("/delete-item", (req, res) =>{
+//   const id = req.body.id;
   
-  console.log("*** Delete ****");
+//   console.log("*** Delete ****");
 
-  console.log("STEP 2: FRONTEND => BACKEND keldi");
+//   console.log("STEP 2: FRONTEND => BACKEND keldi");
 
 
 
-  db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data) {
-    console.log("STEP 3: BACKEND =>  DB ketdi");
+//   db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data) {
+//     console.log("STEP 3: BACKEND =>  DB ketdi");
 
-    console.log("STEP 4: DB => BACKEND keldi");
+//     console.log("STEP 4: DB => BACKEND keldi");
 
-    res.json({state : "success"})
+//     res.json({state : "success"})
 
-    console.log("STEP 5: BACKEND => FrontEnd ketdi");
+//     console.log("STEP 5: BACKEND => FrontEnd ketdi");
   
 
-  });
-})
+//   });
+// })
 
 // edit API
 
@@ -130,25 +130,25 @@ app.post("/edit-item", (req, res) => {
 
 // delete all api
 
-app.post("/delete-all", (req, res) => {
-  console.log("*** DELETE ALL ****");
-  console.log("STEP 2: FrontENd => BackEnd keldi");
+// app.post("/delete-all", (req, res) => {
+//   console.log("*** DELETE ALL ****");
+//   console.log("STEP 2: FrontENd => BackEnd keldi");
 
  
 
-  if(req.body.delete_all) {
-    console.log("STEP 3: BackEnd => DB ketdi");
-    db.collection("plans").deleteMany(function() {
-      res.json({ state: "hamma rejalar ochirildi"});
-    });
+//   if(req.body.delete_all) {
+//     console.log("STEP 3: BackEnd => DB ketdi");
+//     db.collection("plans").deleteMany(function() {
+//       res.json({ state: "hamma rejalar ochirildi"});
+//     });
 
-    console.log("STEP 4: DB => BackEnd keldi");
+//     console.log("STEP 4: DB => BackEnd keldi");
 
-    console.log("STEP 5: BackEnd => FrontEnd Ketdi");
+//     console.log("STEP 5: BackEnd => FrontEnd Ketdi");
 
     
-  }
-})
+//   }
+// })
 
 
 
