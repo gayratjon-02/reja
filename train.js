@@ -1,10 +1,25 @@
+// E-TASK: 
+
+function getReverse(str) {
+        const splitedString = str.split("");
+        const last = splitedString.reverse();
+        console.log(last)
+}
+getReverse("hello");
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+// @MITASK
+
+
 // TASK D
-function checkContent(par1, par2){
-    const a = par1.split("").sort().join("");
-    const b = par2.split("").sort().join("");
-   console.log(a===b);
-};
-checkContent("mitgroup", "gmtiprou");
+// function checkContent(par1, par2){
+//     const a = par1.split("").sort().join("");
+//     const b = par2.split("").sort().join("");
+//    console.log(a===b);
+// };
+// checkContent("mitgroup", "gmtiprou");
 
 // Ikkita parametra ega function tuzing, va functioning
 // berilgan birinchi va ikkinchi parametr qiymatlari o'zaro to'liq
