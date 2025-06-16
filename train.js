@@ -1,9 +1,9 @@
 // E-TASK: 
 
 function getReverse(str) {
-        const splitedString = str.split("");
-        const last = splitedString.reverse();
-        console.log(last)
+         
+        const reversedStr = str.split("").reverse();
+        console.log(reversedStr)
 }
 getReverse("hello");
 
@@ -14,7 +14,7 @@ getReverse("hello");
 
 
 // TASK D
-// function checkContent(par1, par2){
+// function checkContent(par1, par2){ 
 //     const a = par1.split("").sort().join("");
 //     const b = par2.split("").sort().join("");
 //    console.log(a===b);
